@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emptyclean"
+version = "1.0.0"
+description = "Remove empty folders and temporary files safely, with undo."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Hassan Elsayed", email = "acc.hassan.2012@gmail.com" }]
+keywords = ["windows", "cleanup", "empty-folders", "temp-files", "cli", "tkinter"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Win32 (MS Windows)",
+  "Environment :: X11 Applications",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hassanelsayed91/emptyclean"
+Issues = "https://github.com/hassanelsayed91/emptyclean/issues"
+Changelog = "https://github.com/hassanelsayed91/emptyclean/blob/main/CHANGELOG.md"
+
+[project.scripts]
+emptyclean = "emptyclean.cli:main"
+
+[tool.setuptools]
+packages = ["emptyclean"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
